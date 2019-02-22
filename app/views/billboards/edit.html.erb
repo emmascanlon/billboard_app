@@ -1,2 +1,7 @@
-<h1>Billboards#edit</h1>
-<p>Find me in app/views/billboards/edit.html.erb</p>
+<h1> Edit <%=@billboard.name%>
+
+<%= render "form", billboard: @billboard %>
+
+<%=link_to "View All Billboards" %>
+
+

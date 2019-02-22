@@ -1,0 +1,8 @@
+
+<%= form_with(model: artist, local: true) do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name, required: true, placeholder: "Name of Artist" %>
+  <%=f.label :genre %>
+  <%=f.text_field :genre %>
+  <%=f.submit %>
+  <% end %>

@@ -1,0 +1,8 @@
+
+<%= form_with(model: @billboard, local: true) do |f| %>
+  <%=f.label :name %>
+  <%=f.text_field :name, required: true, placeholder: "Name of Billboard" %>
+  <%=f.label :description %>
+  <%=f.text_area :description %>
+  <%=f.submit %>
+  <% end %>

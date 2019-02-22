@@ -1,2 +1,3 @@
 class Billboard < ApplicationRecord
-end
+    has_many :songs
+  end
