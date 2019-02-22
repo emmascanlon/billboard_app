@@ -1,9 +1,12 @@
 <h1>Artists<h1>
 <% @artists.each do |artist| %>
-  <%= artist.name %>
+  <%= artist.name %><br>
   <%= link_to 'Show', artist_path(artist) %>
   <%= link_to 'Edit', edit_artist_path(artist) %>
   <%= link_to 'Delete', artist_path(artist), method: :delete %>
+  <br>
   <% end %>
-
-  <%= link_to 'Create New Artist', new_artist_path %>
+<br>
+<hr>
+  <%= link_to 'Create New Artist', new_artist_path %> <br>
+  <%= link_to "View All Billboards", billboards_path %> <br>

@@ -1,3 +1,10 @@
 
 <h1><%= @artist.name %></h1>
 <h3><%=@artist.genre%><h3>
+<h2>Songs</h2>
+<% @artist.songs.each do |song| %>
+  <%= render 'artists/songs', { song: song } %>
+<% end %>
+<br />
+<%= link_to 'Add Song', new_artist_song_path(@artist) %>
+<%= link_to 'Back', artists_path %>
