@@ -1,5 +1,7 @@
 Song Title:<%= @song.name %><br>
 Album:<%= @song.album %><br>
 Artist: <%= @artist.name %> <br>
+<%= link_to "Delete", [@artist, @song], method: :delete %> 
+<%= link_to "Edit", edit_artist_song_path(@artist, @song) %>
 
 <%=link_to "Back", artist_path(@artist) %>

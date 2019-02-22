@@ -36,8 +36,8 @@ end
 
   def destroy
     @song.destroy
-    redirect_to artist_songs_path
-  end
+    redirect_to artist_path(@artist)
+    end
 
   private
   def set_artist
@@ -49,7 +49,7 @@ end
   end
 
   def song_params
-    params.require(:song).permit(:name, :album)
+    params.require(:song).permit(:name, :album, :billboard_id)
   end
 
 end
