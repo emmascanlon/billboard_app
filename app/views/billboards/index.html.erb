@@ -1,9 +1,9 @@
 <h1>Billboards<h1>
 <% @billboards.each do |billboard| %>
-  <%= billboard.name %>
+  <%= billboard.name %> <br>
   <%= link_to 'Show', billboard_path(billboard) %>
   <%= link_to 'Edit', edit_billboard_path(billboard) %>
-  <%= link_to 'Delete', billboard_path(billboard), method: :delete %>
+  <%= link_to 'Delete', billboard_path(billboard), method: :delete %><br>
   <% end %>
 
   <%= link_to 'Create New Billboard', new_billboard_path %>
