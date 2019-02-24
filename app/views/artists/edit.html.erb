@@ -1,6 +1,9 @@
-
-<h1> Edit <%=@artist.name%>
+<body>
+<div = class "ui header"> Edit <%=@artist.name%></div>
 
 <%= render "form2", artist: @artist %>
-
+<div class = "ui teal button">
 <%=link_to "View All Artists", artists_path %>
+</div>
+
+</body>

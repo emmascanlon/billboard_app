@@ -1,7 +1,18 @@
-Song Title:<%= @song.name %><br>
-Album:<%= @song.album %><br>
-Artist: <%= @artist.name %> <br>
+<body>
+<div "ui header">
+<h1>Title: <%= @song.name %></h1></div>
+<div class = album_artist>
+<h3>Album: <%= @song.album %><br>
+Artist: <%= @artist.name %></h3> 
+</div><br>
+<div class = "ui yellow button"
 <%= link_to "Delete", [@artist, @song], method: :delete %> 
+</div>
+<div class = "ui violet button"
 <%= link_to "Edit", edit_artist_song_path(@artist, @song) %>
-
+</div>
+<div class = "ui teal button"
 <%=link_to "Back", artist_path(@artist) %>
+</div>
+
+</body>

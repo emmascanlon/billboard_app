@@ -1,16 +1,30 @@
-<h1 class = "ui header">Artists<h1>
-<% @artists.each do |artist| %>
-  <%= artist.name %><br>
-  <%= link_to 'Show', artist_path(artist) %>
-  <%= link_to 'Edit', edit_artist_path(artist) %>
-  <%= link_to 'Delete', artist_path(artist), method: :delete %>
-  <br>
+<body>
+
+  <div class = "ui header"><div class = "artists_header">
+  <h1>Artists</h1>
+  </div>
+  </div>
+
+  <div class = "artist_index">
+  <% @artists.each do |artist| %>
+    <div class = "ui header"><h3><%= artist.name %><br> </h3></div>
+  
+    <div class = "ui yellow button">
+    <div class = "ui header"> <h5>
+    <%= link_to 'Show', artist_path(artist) %> || 
+    <%= link_to 'Edit', edit_artist_path(artist) %> ||
+    <%= link_to 'Delete', artist_path(artist), method: :delete %> </h5>
+   </div>
+  </div>
   <% end %>
 <br>
 <hr>
+<div class = "bottom_buttons">
 <div class = "ui violet button">
-  <%= link_to 'Create New Artist', new_artist_path %> <br>
+  <%= link_to 'Create New Artist', new_artist_path %>
   </div>
   <div class = "ui teal button">
-  <%= link_to "View All Billboards", billboards_path %> <br>
+  <%= link_to "View All Billboards", billboards_path %>
   </div>
+  </div>
+  </body>

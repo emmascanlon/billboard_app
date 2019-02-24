@@ -2,3 +2,31 @@
 @import "./artists";
 @import "./billboards";
 @import "./songs";
+
+.image {
+  height: 50px;
+  width: 50px;
+}
+
+.genre {
+  font-size: 18px;
+  color: rgb(0, 156, 149);
+}
+
+.album_artist {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  color: rgb(0, 156, 149);
+}
+
+
+.artists_header{
+  color: rgb(0, 156, 149)
+}
+
+.bottom_buttons {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

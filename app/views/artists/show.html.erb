@@ -1,10 +1,15 @@
 
-<h1><%= @artist.name %></h1>
-<h3><%=@artist.genre%><h3>
+<body>
+<h1 class = "ui header"><%= @artist.name %> <div class = "genre"><%=@artist.genre%></div> </h1>
 <h2>Songs</h2>
 <% @artist.songs.each do |song| %>
   <%= render 'artists/songs', { song: song } %>
 <% end %>
 <br />
-<%= link_to 'Add Song', new_artist_song_path(@artist) %>
-<%= link_to 'Back', artists_path %>
+<div class = "ui violet button"
+<%= link_to 'Add Song', new_artist_song_path(@artist)%> </div>
+<div class = "ui teal button"
+<%=link_to 'Back', artists_path%>
+</div>
+</body>
+
