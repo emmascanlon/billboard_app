@@ -1,10 +1,24 @@
-<h1>Billboards<h1>
-<% @billboards.each do |billboard| %>
-  <%= billboard.name %> <br>
-  <%= link_to 'Show', billboard_path(billboard) %>
-  <%= link_to 'Edit', edit_billboard_path(billboard) %>
-  <%= link_to 'Delete', billboard_path(billboard), method: :delete %><br>
-  <% end %>
+<body>
+<h1 class = "ui header">Billboards</h1>
 
+<% @billboards.each do |billboard| unless billboard.name == "No Billboard" %>
+  <h3><%= billboard.name %> </h3>
+  <div class = "ui yellow button"
+  <h5><%= link_to 'Show', billboard_path(billboard) %> || 
+  <%= link_to 'Edit', edit_billboard_path(billboard) %> || 
+  <%= link_to 'Delete', billboard_path(billboard), method: :delete %><br> </h5>
+  </div>
+  <% end %>
+  <% end %>
+  <br>
+  <hr>
+<div class = "ui violet button">
   <%= link_to 'Create New Billboard', new_billboard_path %>
+  </div>
+  <div class = "ui teal button">
   <%= link_to "View Artists", artists_path %>
+  </div>
+  </body>
+
+
+  

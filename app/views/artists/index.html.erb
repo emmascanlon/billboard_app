@@ -1,4 +1,4 @@
-<h1>Artists<h1>
+<h1 class = "ui header">Artists<h1>
 <% @artists.each do |artist| %>
   <%= artist.name %><br>
   <%= link_to 'Show', artist_path(artist) %>
@@ -8,5 +8,9 @@
   <% end %>
 <br>
 <hr>
+<div class = "ui violet button">
   <%= link_to 'Create New Artist', new_artist_path %> <br>
+  </div>
+  <div class = "ui teal button">
   <%= link_to "View All Billboards", billboards_path %> <br>
+  </div>
