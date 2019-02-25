@@ -8,10 +8,10 @@ Artist: <%= @artist.name %></h3>
 <div class = "ui yellow button"
 <%= link_to "Delete", [@artist, @song], method: :delete %> 
 </div>
-<div class = "ui violet button"
-<%= link_to "Edit", edit_artist_song_path(@artist, @song) %>
-</div>
-<div class = "ui teal button"
+
+
+<%= link_to "Edit", edit_artist_song_path(@artist, @song)%>
+<div class = "ui teal button">
 <%=link_to "Back", artist_path(@artist) %>
 </div>
 
